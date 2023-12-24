@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Student Admission Predictor ML App</title>
+  <style>
+  body {
+      margin-top: 10px;
+      margin: 0;
+      padding: 0;
+      
+      font-family: 'Roboto', sans-serif; /* Change to your preferred font */
+      background: url('static/images/Housing-Florida-Prices-House-Rise.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      
+    }
+  form {
+      
+      
+      font-size: 12 px;
+      margin: 2px auto;
+      max-width: 600px;
+      padding: 3px;
+      background-color:white;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+   select,
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 2px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    } 
+    
+    input[type="submit"] {
+      background-color:blue;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+    
+    p,h2 {
+    text-align: center;
+    }
+    
+   
+
+    
+  </style>
+</head>
+
+<body style="background-color:#DDA0DD;">
+<hr width="99%" color="#0F52BA" size="17px" />
+    <form method="post"   action="/process_form" style="top">
+            <h4 class="input-group-text">Enter the how many Bedroom you want in houes:</h4>
+            <label for="bedroom"></label>
+                <input type="text" name="bedroom" id="bedroom" required class="orm-label" style="width:200px;" >
+            
+            <h4 class="input-group-text">Enter the how many Bathroom you want in houes:</h4>
+            <label for="bathroom"></label>
+                <input type="text" name="bathroom" id="bathroom" required class="orm-label" style="width:200px;" >
+                
+            <h4 class="input-group-text">Enter the  Square footage living area:</h4>
+            <label for="sqft_living"></label>
+                <input type="text" name="sqft_living" id="sqft_living" required class="orm-label" style="width:200px;" >
+                
+            <h4 class="input-group-text">Enter the  Square footage of the lot:</h4>
+            <label for="sqft_lot"></label>
+                <input type="text" name="sqft_lot" id="sqft_lot" required class="orm-label" style="width:200px;" >
+            
+            <h4 class="input-group-text">Enter how many floor you want in houes:</h4>
+            <label for="floors"></label>
+                <input type="text" name="floors" id="floors" required class="orm-label" style="width:200px;" >
+            
+            <h4 >Enter the zipcode of area:</h4>
+            <label for="input1"></label>
+                <input type="text" name="zipcode" id="zipcode" required class="orm-label" style="width:200px;" >
+       
+            
+            
+        <input type="submit" value="Submit" class="btn btn-outline-info">
+    </form>
+   
+   <div>
+       
+   <h2 style="background-color:white;">{{ prediction_text }}</h2>
+       
+   </div>
+
+ 
+ </div>
+ <p>©Project by Shekhar Pawar </p>
+</body>
+</html>
